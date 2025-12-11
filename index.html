@@ -6,38 +6,60 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>TA05 - MAIN PAGE</h1>
-  </header>
+  <div class="menu-toggle" onclick="toggleMenu()">▶ Menú</div>
 
-  <main class="container">
-    <div class="card">
-      <div class="card-title">PY, CSV, XML, JSON</div>
-      <div class="card-image">
-        <img src="imatges/py.png" alt="Imagen de código">
-      </div>
-      <div class="card-description">
-        <p>Descripción del proyecto 1.</p>
-      </div>
-      <button onclick="window.location.href='project1.html'">Project 1</button>
-    </div>
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="1st Project.html">Project 1</a></li>
+      <li><a href="2nd Project.html">Project 2</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <div class="card">
-      <div class="card-title">LIFE CLUB MIXED MARTIAL ARTS</div>
-      <div class="card-image">
-        <img src="imatges/lifeclubmma.png" alt="Logo MMA">
-      </div>
-      <div class="card-description">
-        <p>This website, created as a final project for a mid-level degree, is a functional website that simulates a neighborhood MMA academy, with a class registration form and a store with a payment gateway and mixed martial arts products.</p>
-      </div>
-      <button onclick="window.location.href='project2.html'">Project 2</button>
-    </div>
-  </main>
+  <div class="main-content">
+    <header>
+      <h1>TA05 - MAIN PAGE</h1>
+    </header>
 
-  <footer>
-    <p><strong>Phone number:</strong> 621336457</p>
-    <p><strong>E-mail:</strong> pol.guerrero.7e7@itb.cat</p>
-    <p><strong>Address:</strong> Carrer d'Aiguablava, 121, Nou Barris, 08033 Barcelona</p>
-  </footer>
+    <main class="container">
+      <div class="card">
+        <div class="card-title">PY, CSV, XML, JSON</div>
+        <div class="card-image">
+          <img src="imatges/py.png" alt="Imagen de código">
+        </div>
+        <div class="card-description">
+          <p>Team project focused on data management and interoperability: Built a web form to collect IT incidents. Exported data to CSV, converted to XML, processed with Python, and stored in JSON. Applied open standards for sustainability and created statistics for meaningful insights.</p>
+        </div>
+        <button onclick="window.location.href='1st Project.html'">Project 1</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">LIFE CLUB MIXED MARTIAL ARTS</div>
+        <div class="card-image">
+          <img src="imatges/lifeclubmma.png" alt="Logo MMA">
+        </div>
+        <div class="card-description">
+          <p>This website, created as a final project for a mid-level degree, is a functional website that simulates a neighborhood MMA academy, with a class registration form and a store with a payment gateway and mixed martial arts products.</p>
+        </div>
+        <button onclick="window.location.href='2nd Project.html'">Project 2</button>
+      </div>
+    </main>
+
+    <footer>
+      <p><strong>Phone number:</strong> 621336457</p>
+      <p><strong>E-mail:</strong> pol.guerrero.7e7@itb.cat</p>
+      <p><strong>Address:</strong> Carrer d'Aiguablava, 121, Nou Barris, 08033 Barcelona</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+      const toggle = document.querySelector(".menu-toggle");
+      sidebar.classList.toggle("active");
+      toggle.textContent = sidebar.classList.contains("active") ? "▼ Menú" : "▶ Menú";
+    }
+  </script>
 </body>
 </html>
