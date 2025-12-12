@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
 }
 
-/* Botón de menú desplegable */
+/* Botón de menú desplegable superior */
 .menu-toggle {
   background-color: #111;
   color: white;
@@ -28,14 +28,17 @@ body {
   border: none;
   text-align: left;
   width: 100%;
+  position: relative;
+  z-index: 1000;
 }
 
-/* Menú lateral oculto por defecto */
+/* Menú superior oculto por defecto */
 .sidebar {
   display: none;
   background-color: #111;
   color: white;
   padding: 0 20px;
+  width: 100%;
 }
 
 .sidebar.active {
@@ -44,11 +47,11 @@ body {
 
 .sidebar ul {
   list-style: none;
-  padding: 20px 0;
-}
-
-.sidebar ul li {
-  margin: 15px 0;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* permet que els enllaços baixin en pantalles petites */
 }
 
 .sidebar ul li a {
@@ -83,7 +86,7 @@ header h1 {
   letter-spacing: 1px;
 }
 
-/* Contenedor de tarjetas */
+/* Contenedor de tarjetas (main page) */
 main.container {
   flex: 1;
   display: flex;
@@ -98,7 +101,8 @@ main.container {
 .card {
   background-color: white;
   border-radius: 20px;
-  width: 460px;
+  width: 100%;
+  max-width: 460px;
   padding: 20px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.1);
   text-align: left;
@@ -177,7 +181,7 @@ footer p {
   font-size: 14px;
 }
 
-/* Página de proyecto individual */
+/* Página de proyecto individual (Project 2) */
 .project-page {
   padding: 40px;
   flex: 1;
@@ -210,31 +214,6 @@ video {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   display: block;
-}
-
-
-/* Lista de tecnologías */
-.tech ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.tech li {
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-/* Responsive */
-@media (max-width: 980px) {
-  main.container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 460px;
-  }
 }
 
 /* Millora visual per a la descripció */
@@ -304,4 +283,70 @@ video {
   color: #28a745;
   font-weight: bold;
   font-size: 16px;
+}
+
+/* Responsive general */
+@media (max-width: 1200px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 980px) {
+  main.container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 460px;
+    min-height: auto;
+  }
+
+  .project-page {
+    padding: 20px;
+  }
+
+  video {
+    max-width: 100%;
+  }
+
+  .sidebar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .sidebar ul li a {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+  }
+
+  .card-description p {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
 }
