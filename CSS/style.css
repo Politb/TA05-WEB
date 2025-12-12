@@ -1,3 +1,4 @@
+/* Reset y estructura base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,7 +18,7 @@ body {
   min-height: 100vh;
 }
 
-/* Botón flecha */
+/* Botón de menú desplegable */
 .menu-toggle {
   background-color: #111;
   color: white;
@@ -29,7 +30,7 @@ body {
   width: 100%;
 }
 
-/* Nav lateral oculto por defecto */
+/* Menú lateral oculto por defecto */
 .sidebar {
   display: none;
   background-color: #111;
@@ -82,7 +83,7 @@ header h1 {
   letter-spacing: 1px;
 }
 
-/* Main */
+/* Contenedor de tarjetas */
 main.container {
   flex: 1;
   display: flex;
@@ -93,7 +94,7 @@ main.container {
   flex-wrap: wrap;
 }
 
-/* Tarjetas */
+/* Tarjetas de proyecto */
 .card {
   background-color: white;
   border-radius: 20px;
@@ -145,6 +146,7 @@ main.container {
   margin: 0;
 }
 
+/* Botón de tarjeta */
 button {
   align-self: flex-start;
   background-color: #007bff;
@@ -173,4 +175,59 @@ footer {
 footer p {
   margin: 8px 0;
   font-size: 14px;
+}
+
+/* Página de proyecto individual */
+.project-page {
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.project-page h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.project-page p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Sección de vídeo */
+.video-demo {
+  text-align: center;
+}
+
+video {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Lista de tecnologías */
+.tech ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.tech li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  main.container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 460px;
+  }
 }
