@@ -3,47 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <title>Project 2 - Life Club MMA</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-  <header>
-    <h1>Life Club Mixed Martial Arts</h1>
-  </header>
+  <div class="menu-toggle" onclick="toggleMenu()">▶ Menu</div>
 
-  <main class="project-page">
-    <section class="intro">
-      <h2>Project Description</h2>
-      <p>
-        This website simulates a neighborhood Mixed Martial Arts (MMA) academy. 
-        It includes a class registration form and an online store with MMA-related products, 
-        integrating a functional payment gateway. The design aims to convey the strength and discipline of MMA, 
-        with a modern and sporty aesthetic.
-      </p>
-    </section>
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="1st Project.html">Project 1</a></li>
+      <li><a href="2nd Project.html">Project 2</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="video-demo">
-      <h2>Video Demonstration</h2>
-      <video controls>
-        <source src="videos/project2-demo.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-    </section>
+  <div class="main-content">
+    <header>
+      <h1>Life Club Mixed Martial Arts</h1>
+    </header>
 
-    <section class="tech">
-      <h2>Technologies Used</h2>
-      <ul>
-        <li>HTML5 and CSS3 for structure and design</li>
-        <li>JavaScript for interactivity</li>
-        <li>Simulated payment gateway</li>
-        <li>Responsive design for mobile and desktop</li>
-      </ul>
-    </section>
-  </main>
+    <main class="project-page">
+      <section class="intro">
+        <h2>Project Description</h2>
+        <p>
+          This website simulates a neighborhood Mixed Martial Arts (MMA) academy. It includes a class registration form and an online store with MMA-related products, integrating a functional payment gateway. The design aims to convey the strength and discipline of MMA, with a modern and sporty aesthetic.
+        </p>
+      </section>
 
-  <footer>
-    <p><strong>Phone number:</strong> 621336457</p>
-    <p><strong>E-mail:</strong> pol.guerrero.7e7@itb.cat</p>
-    <p><strong>Address:</strong> Carrer d'Aiguablava, 121, Nou Barris, 08033 Barcelona</p>
-  </footer>
+      <section class="video-demo">
+        <h2>Video Demonstration</h2>
+        <video controls>
+          <source src="VIDEOS/PROJECT2.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </section>
+
+      <section class="tech">
+        <h2>Technologies Used</h2>
+        <ul>
+          <li>HTML5 and CSS3 for structure and design</li>
+          <li>JavaScript for interactivity</li>
+          <li>Simulated payment gateway</li>
+          <li>Responsive design for mobile and desktop</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>E-mail:</strong> pol.guerrero.7e7@itb.cat</p>
+      <p><strong>Address:</strong> Carrer d'Aiguablava, 121, Nou Barris, 08033 Barcelona</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+      const toggle = document.querySelector(".menu-toggle");
+      sidebar.classList.toggle("active");
+      toggle.textContent = sidebar.classList.contains("active") ? "▼ Menu" : "▶ Menu";
+    }
+  </script>
 </body>
 </html>

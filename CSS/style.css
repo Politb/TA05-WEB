@@ -203,10 +203,15 @@ footer p {
 }
 
 video {
-  max-width: 100%;
+  max-width: 640px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: block;
 }
+
 
 /* Lista de tecnologías */
 .tech ul {
@@ -230,4 +235,73 @@ video {
     width: 100%;
     max-width: 460px;
   }
+}
+
+/* Millora visual per a la descripció */
+.intro {
+  background-color: #fff;
+  padding: 30px;
+  border-left: 6px solid #007bff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.intro:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.intro h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Millora visual per a tecnologies */
+.tech {
+  background-color: #fff;
+  padding: 30px;
+  border-left: 6px solid #28a745;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.tech:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.tech h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #28a745;
+}
+
+.tech ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tech li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #444;
+}
+
+.tech li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 16px;
 }
